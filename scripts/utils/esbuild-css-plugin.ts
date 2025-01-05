@@ -57,7 +57,7 @@ export function esbuildCssPlugin(options: CssPluginProps) {
             if(!document.getElementById('${cssId}')) {
               const s=document.createElement("style");
               s.id='${cssId}';
-              s.textContent=\`${result}\`;
+              s.textContent=\`${result?.replace(/\\:/g, '\\\\:')}\`;
               document.head.append(s)
             }
           `;

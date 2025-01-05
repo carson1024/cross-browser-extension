@@ -9,6 +9,7 @@
     "start": "node --loader ts-node/esm --experimental-specifier-resolution=node ./scripts/build/index.ts --watch --runBrowser",
     "build": "node --loader ts-node/esm --experimental-specifier-resolution=node ./scripts/build/index.ts --archive",
     "checkTs": "tsc --noEmit",
+    "build:css": "npx tailwindcss -i ./src/pages/popup/input.css -o ./src/pages/popup/index.css",
     "eslint": "eslint --ext js,ts,tsx",
     "lint": "npm run eslint src",
     "lint:fix": "npm run eslint --fix src"
@@ -29,7 +30,9 @@
     "archiver": "^7.0.1",
     "autoprefixer": "^10.4.20",
     "concurrently": "^9.1.2",
+    "cssnano": "^7.0.6",
     "esbuild": "0.24.2",
+    "esbuild-style-plugin": "^1.6.3",
     "eslint": "^9.17.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.31.0",
@@ -43,8 +46,11 @@
     "node-watch": "^0.7.4",
     "nodemon": "^3.1.9",
     "postcss": "^8.4.49",
+    "postcss-discard-comments": "^7.0.3",
     "postcss-import": "^16.1.0",
+    "postcss-plugin-namespace": "^0.0.3",
     "sass": "^1.83.1",
+    "tailwindcss": "^3.4.17",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
@@ -52,8 +58,11 @@
     "web-ext": "^8.3.0"
   },
   "dependencies": {
+    "esbuild-postcss": "^0.0.4",
+    "postcss-cli": "^11.0.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "tailgrids": "^2.2.7"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
