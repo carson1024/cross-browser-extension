@@ -5,7 +5,7 @@ import { buildManifestV3 } from "./build-manifest-v3";
 import { contentScripts } from '../content-scripts';
 
 export function buildManifest(version: number, config: ManifestConfig) {
-  const hostPermissions = ['https://example.com/*'];
+  const hostPermissions = ['https://photon-sol.tinyastro.io/*/memescope', 'https://dexscreener.com/solana/*', 'https://pump.fun/*'];
   if (process.env.NODE_ENV === 'development') {
     hostPermissions.push('http://localhost:3000/*');
   }
