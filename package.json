@@ -7,7 +7,7 @@
   "type": "module",
   "scripts": {
     "start": "node --loader ts-node/esm --experimental-specifier-resolution=node ./scripts/build/index.ts --watch --runBrowser",
-    "build": "node --loader ts-node/esm --experimental-specifier-resolution=node ./scripts/build/index.ts --archive",
+    "build": "node --loader ts-node/esm --experimental-specifier-resolution=node ./scripts/build/index.ts --archive --browser=chrome,firefox",
     "checkTs": "tsc --noEmit",
     "build:css": "npx tailwindcss -i ./src/pages/popup/input.css -o ./src/pages/popup/index.css",
     "eslint": "eslint --ext js,ts,tsx",
