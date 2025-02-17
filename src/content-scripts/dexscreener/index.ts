@@ -46,7 +46,7 @@ const addButton = (div: any) => {
   button.innerHTML = "A";
   button.className = "_ex_btn_analyze circle";
   button.style.marginLeft = '5px';
-  addButtonEventListener(button);
+  addButtonEventListener(button, div.closest('a'));
 
   // Append the button to the child div
   div.append(button);

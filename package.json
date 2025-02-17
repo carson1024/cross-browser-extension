@@ -17,6 +17,7 @@
   "author": "",
   "devDependencies": {
     "@esbuilder/html": "^0.0.6",
+    "@solana/web3.js": "^1.98.0",
     "@types/archiver": "^6.0.3",
     "@types/chrome": "^0.0.289",
     "@types/fs-extra": "^11.0.4",
